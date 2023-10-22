@@ -16,6 +16,7 @@ class Dishcontent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.brown,
         leading: IconButton(
             onPressed: () {
               backtocategory();
@@ -36,7 +37,8 @@ class Dishcontent extends StatelessWidget {
                 ),
               ),
               const TabBar(
-                labelColor: Colors.blue,
+                labelColor: Colors.brown,
+                indicatorColor: Colors.brown,
                 tabs: [
                   Tab(
                     icon: Icon(Icons.dinner_dining),
@@ -51,7 +53,6 @@ class Dishcontent extends StatelessWidget {
               Expanded(
                   child: TabBarView(
                 children: [
-                  //! INGREDIENT TILE
                   ListView(
                     children: dishcontentlist.map((e) {
                       return Dishingredients(
@@ -60,8 +61,6 @@ class Dishcontent extends StatelessWidget {
                           ingredient: e.ingredient);
                     }).toList(),
                   ),
-
-                  //! STEPS TILE
                   ListView(
                     children: dishcontentlist.map((e) {
                       return Dishsteps(

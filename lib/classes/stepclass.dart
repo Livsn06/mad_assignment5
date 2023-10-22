@@ -19,9 +19,15 @@ class Dishsteps extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.all(10),
             child: SizedBox(
-              height: 100,
+              height: 120,
               child: Card(
-                child: Text(e),
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Text(
+                    e,
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                ),
               ),
             ),
           );

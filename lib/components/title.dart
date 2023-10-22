@@ -9,40 +9,49 @@ class Titlescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 248, 222, 188),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //! IMAGE
             Image.network(
-                "https://st5.depositphotos.com/1748586/65901/v/450/depositphotos_659010562-stock-illustration-young-woman-cooking-kitchen-healthy.jpg"),
-
-            //! TITLE TEXT
-            const Text(
-              "Title Screen",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 30),
+                "https://st4.depositphotos.com/12982378/27928/i/450/depositphotos_279287006-stock-photo-oil-fresh-vegetables-cooking-utensils.jpg"),
+            const SizedBox(
+              height: 30,
             ),
-
-            // ! BUTTON 1
+            const Text(
+              "Dish Mania",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 52, 52, 52),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
             ElevatedButton(
                 onPressed: () {
                   gotoCategory();
                 },
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(Colors.blue)),
+                    fixedSize: MaterialStatePropertyAll(Size.fromHeight(50)),
+                    backgroundColor: MaterialStatePropertyAll(Colors.brown)),
                 //--
                 child: const Text("Read")),
-
-            // ! BUTTON 2
+            const SizedBox(
+              height: 10,
+            ),
             ElevatedButton(
                 onPressed: () {
                   exit(0);
                 },
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(Colors.orange)),
+                    fixedSize: MaterialStatePropertyAll(Size.fromHeight(50)),
+                    backgroundColor: MaterialStatePropertyAll(Colors.red)),
                 //--
                 child: const Text("Exit"))
           ],

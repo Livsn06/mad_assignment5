@@ -21,7 +21,13 @@ class Dishingredients extends StatelessWidget {
             child: SizedBox(
               height: 70,
               child: Card(
-                child: Text(e),
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Text(
+                    e,
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                ),
               ),
             ),
           );

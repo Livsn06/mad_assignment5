@@ -12,9 +12,8 @@ class Categoryscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 231, 230, 230),
-      //! APPBAR
       appBar: AppBar(
-        //! BACK BUTTON
+        backgroundColor: Colors.brown,
         leading: IconButton(
           onPressed: () {
             backtotitle();
@@ -23,7 +22,7 @@ class Categoryscreen extends StatelessWidget {
         ),
 
         //--
-        title: const Text("Dish List"),
+        title: const Text("Dish Category"),
         centerTitle: true,
       ),
       body: GridView(
